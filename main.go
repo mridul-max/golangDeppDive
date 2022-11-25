@@ -23,7 +23,7 @@ func main() {
 	var router = mux.NewRouter()
 	router.HandleFunc("/customers", customers).Methods("Get").Name("customers")
 
-	err := http.ListenAndServe(":8080", router)
+	err := http.ListenAndServe(":8081", router)
 	if err != nil {
 		log.Fatal(err)
 	}
